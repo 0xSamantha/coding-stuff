@@ -17,6 +17,13 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+const weapons = [
+    { name: "stick", power: 5 },
+    { name: "dagger", power: 30 },
+    { name: "claw hammer", power: 50 },
+    { name: "sword", power: 100 }
+  ];
+
 // location controls
 const locations = [
     {
@@ -63,8 +70,8 @@ function update(location) {
   }
 
 
-function goCave() {
-    console.log("Going to cave.");
+  function goCave() {
+    update(locations[2]);
   }
 
   function fightDragon() {
@@ -72,11 +79,21 @@ function goCave() {
   }
 
   function buyHealth() {
-
+    if (gold >= 10) {
+      gold -= 10;
+      health += 10; // lose 10 gold, gain 10 health
+      goldText.innerText = gold;
+      healthText.innerText = health;
+    }
+    else {
+        text.innerText = "You do not have enough gold to buy health.";
+      }
   }
   
   function buyWeapon() {
-  
+    if (gold >= 30) {
+      gold -= 30;
+    }
   }
 
   function fightSlime() {
