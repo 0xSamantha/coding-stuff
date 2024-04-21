@@ -1,5 +1,5 @@
 body {
-    background-color: #0a0a23;
+    background-color: #1913cb;
   }
 
 #text {
@@ -41,7 +41,7 @@ body {
   button { 
     cursor: pointer;
     color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
+    background-color: #af50bb;
+    background-image: linear-gradient(#a130b0, #b830bc);
+    border: 3px solid #af50bb;
   }
